@@ -10,13 +10,7 @@
 
 <h1> Consultar dados </h1>
    
-<?php
-if(!empty($erros)):
-    foreach($erros as $erro):
-        echo $erro;
-    endforeach;
-endif;
-?>
+
 
 
 <form method="GET" id="inscricao" name="inscricao", action="<?php echo $_SERVER['PHP_SELF']; ?>">
@@ -76,6 +70,12 @@ if(isset($_GET['btn-buscar'])):
 
 endif;
 
-
 ?>
 
+<?php
+if(!empty($erros)):
+    foreach($erros as $erro):
+        echo $erro;
+    endforeach;
+endif;
+?>

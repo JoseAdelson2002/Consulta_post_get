@@ -1,3 +1,33 @@
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <title>Consultar dados</title>
+
+</head>
+
+<body>
+
+<h1> Consultar dados </h1>
+   
+<?php
+if(!empty($erros)):
+    foreach($erros as $erro):
+        echo $erro;
+    endforeach;
+endif;
+?>
+
+
+<form method="GET" id="inscricao" name="inscricao", action="<?php echo $_SERVER['PHP_SELF']; ?>">
+cpf: <input type="text" name="cpf"><br>
+<button type="submit" name="btn-buscar"> Buscar </button>
+</form>
+
+</body>
+
+</html>
+
 <?php
 
 //Verificando se o botão consultar foi clicado
@@ -49,33 +79,3 @@ endif;
 
 ?>
 
-
-<html>
-<head>
-
-    <meta charset="utf-8">
-    <title>Consultar dados</title>
-
-</head>
-
-<body>
-
-<h1> Consultar dados </h1>
-   
-<?php
-if(!empty($erros)):
-    foreach($erros as $erro):
-        echo $erro;
-    endforeach;
-endif;
-?>
-
-
-<form method="GET" id="inscricao" name="inscricao", action="<?php echo $_SERVER['PHP_SELF']; ?>">
-cpf: <input type="text" name="cpf"><br>
-<button type="submit" name="btn-buscar"> Buscar </button>
-</form>
-
-</body>
-
-</html>
